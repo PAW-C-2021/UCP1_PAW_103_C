@@ -1,0 +1,59 @@
+﻿@model IEnumerable<UCP1PraktikumPAW.Models.JasaKirim>
+
+@{
+    ViewData["Title"] = "JASA PENGIRIMAN";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Nama Jasa Kirim")
+            </th>
+            <th>
+                @Html.DisplayName("Tanggal Diterima")
+            </th>
+            <th>
+                @Html.DisplayName("Jenis Layanan")
+            </th>
+            <th>
+                @Html.DisplayName("Harga Jasa")
+            </th>
+            <th>
+                @Html.DisplayName("Id Order Navigation")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NamaJasaKirim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TanggalDiterima)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JenisLayanan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HargaJasa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdOrderNavigation.IdOrder)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdJasaKirim"><i class="fa fa-marker fa-lg"></i></a> |
+                <a asp-action="Details" asp-route-id="@item.IdJasaKirim"><i class="fas fa-list"></i></a> |
+                <a asp-action="Delete" asp-route-id="@item.IdJasaKirim"><i class="fa fa-trash-alt fa-lg"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

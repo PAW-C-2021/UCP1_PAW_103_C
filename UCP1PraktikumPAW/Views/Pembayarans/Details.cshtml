@@ -1,0 +1,42 @@
+﻿@model UCP1PraktikumPAW.Models.Pembayaran
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pembayaran</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalHarga)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalHarga)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ViaPembayaran)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ViaPembayaran)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdCustomerNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdCustomerNavigation.IdCustomer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdOrderNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdOrderNavigation.IdOrder)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdPembayaran">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

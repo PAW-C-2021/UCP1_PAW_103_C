@@ -1,0 +1,42 @@
+﻿@model UCP1PraktikumPAW.Models.Penjual
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Penjual</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NamaPenjual)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NamaPenjual)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailPenjual)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmailPenjual)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AlamatPenjual)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AlamatPenjual)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NoHpPenjual)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NoHpPenjual)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdPenjual">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

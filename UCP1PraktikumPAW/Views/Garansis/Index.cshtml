@@ -1,0 +1,47 @@
+﻿@model IEnumerable<UCP1PraktikumPAW.Models.Garansi>
+
+@{
+    ViewData["Title"] = "GARANSI";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Kerusakan")
+            </th>
+            <th>
+                @Html.DisplayName("Jenis Garansi")
+            </th>
+            <th>
+                @Html.DisplayName("Id Jasa Kirim")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kerusakan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JenisGaransi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdJasaKirimNavigation.IdJasaKirim)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdGaransi"><i class="fa fa-marker fa-lg"></i></a> |
+                <a asp-action="Details" asp-route-id="@item.IdGaransi"><i class="fas fa-list"></i></a> |
+                <a asp-action="Delete" asp-route-id="@item.IdGaransi"><i class="fa fa-trash-alt fa-lg"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

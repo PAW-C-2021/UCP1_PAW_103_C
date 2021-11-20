@@ -1,0 +1,51 @@
+﻿@model UCP1PraktikumPAW.Models.JasaKirim
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>JasaKirim</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NamaJasaKirim)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NamaJasaKirim)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TanggalDiterima)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TanggalDiterima)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JenisLayanan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JenisLayanan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HargaJasa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HargaJasa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdOrderNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdOrderNavigation.IdOrder)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdJasaKirim" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

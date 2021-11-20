@@ -1,0 +1,48 @@
+﻿@model UCP1PraktikumPAW.Models.JasaKirim
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>JasaKirim</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NamaJasaKirim)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NamaJasaKirim)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TanggalDiterima)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TanggalDiterima)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JenisLayanan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JenisLayanan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HargaJasa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HargaJasa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdOrderNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdOrderNavigation.IdOrder)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdJasaKirim">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
